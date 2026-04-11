@@ -53,6 +53,10 @@ body {
             font-size: 18px;
             margin: 0px;
         }
+        .article-title:hover {
+            color: var(--bg-color);
+            cursor: pointer;
+        }
 
         .article-description {
             color: var(--description-color);
