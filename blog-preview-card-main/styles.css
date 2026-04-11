@@ -1,20 +1,37 @@
+@property --bg-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #f5d04e;
+}
+
+@property --description-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #535050;
+}
+
 body {
     position: relative;
-    background: #f5d04e;
+    background: var(--bg-color);
     display: flex;
     justify-content: center;                                                                                                                              
     align-items: center;
     min-height: 100vh;
     margin: 0;
     
+    main {
+        width: 100%;
+    }
+    
     .card {
         display: flex;
         flex-direction: column;
-        gap: 15px;
-        width: 310px;
-        border-radius: 15px;
+        gap: 1rem;
+        width: min(19rem, 100% - 3.5rem);
+        border-radius: 1rem;
         box-shadow: 4px 4px 0px black; 
-        padding: 15px;
+        margin-inline: auto;
+        padding: 1rem;
         background-color: white;
         font-size: 12px;
 
@@ -38,16 +55,17 @@ body {
         }
 
         .article-description {
-            color: #535050;
+            color: var(--description-color);
         }
 
         .author {
             display: flex;
-            gap: 10px;
+            align-items: center;
+            gap: .5rem;
             font-weight: bold;
 
             img {
-                width: 20px;
+                width: 1.5rem;
             }
         }
     }
@@ -56,6 +74,7 @@ body {
     .attribution {
         position: absolute;    
         bottom: 0;
+        padding: 1rem;
     }
 }
 
