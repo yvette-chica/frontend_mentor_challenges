@@ -1,0 +1,58 @@
+@property --main-bg-color {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #141414;
+}
+@property --neon-green {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #c4f82a;
+}
+@property --card-bg {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #1f1f1f;
+}
+
+
+body {
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--main-bg-color);
+}
+main {
+    display: flex;
+    justify-content: center;
+}
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--card-bg);
+}
+.profile-card .avatar-image {
+    width: 7rem;
+    border-radius: 100%;
+}
+.profile-card .user-name {
+    color: white;
+}
+.profile-card .location {
+    color: var(--neon-green);
+}
+.profile-card .description {
+    color: white;
+}
+
+.profile-card .social-profile-link {
+    width: 100%;
+}
+
+.attribution {
+    position: absolute;    
+    bottom: 0;
+    padding: 1rem;
+}
+
